@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="resume-container" id="resume">
+    <header class="header">
+      <h1 contenteditable="true">Rudraraj Kudale</h1>
+      <p class="location" contenteditable="true">Kothrud, Pune, Maharashtra, 411038</p>
+      <div class="contact">
+        <p contenteditable="true">📞 +91-9307103123 | 📧 rudrarajkudale@gmail.com</p>
+        <p contenteditable="true">linkedin.com/in/rudraraj-kudale | github.com/rudrarajkudale</p>
+      </div>
+    </header>
+
+    <section class="profile">
+      <h2>Profile</h2>
+      <p contenteditable="true">I am a final-year B.Tech Computer Engineering student at DY Patil School of Engineering Technology, Pune, with a CGPA of 9.6. Proficient in Java, C, JavaScript, and full-stack development, I possess a strong foundation in Data Structures and Algorithms (DSA). I hold certifications in Full Stack Development and Web Development and am passionate about building impactful solutions in technology.</p>
+    </section>
+
+    <section class="skills">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li contenteditable="true">Languages: Java, JavaScript, C, HTML, CSS</li>
+        <li contenteditable="true">Frameworks/Tools: Node.js, Express.js, React.js, Redux, Tailwind CSS, GSAP</li>
+        <li contenteditable="true">Databases: MySQL, MongoDB</li>
+        <li contenteditable="true">Others: VS Code, Git, GitHub, REST API, Data Structures and Algorithms</li>
+      </ul>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <ul>
+        <li contenteditable="true"><strong>D. Y. Patil University, Pune:</strong> Bachelor of Technology in Computer Engineering; CGPA: 9.64 (2022 - 2025)</li>
+        <li contenteditable="true"><strong>Ekalavya Shikshan Sanstha, Pune:</strong> Diploma in Computer Technology; Percentage: 83.49% (2019 - 2022)</li>
+        <li contenteditable="true"><strong>Sau. Vimlabai Garware Prashala, Pune:</strong> SSC; Percentage: 87.60% (2018 - 2019)</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li contenteditable="true"><strong>WanderLust Website | Node.js, Express.js, MongoDB (2024):</strong> Developed a responsive rental web application for property exploration and listing. Implemented user authentication, filtering, and property management features. Deployed the application on Render for live access: wanderlust-3xf6.onrender.com.</li>
+        <li contenteditable="true"><strong>Employee Management System | React.js, Tailwind CSS, LocalStorage (2024):</strong> Created a web app for employee management, task assignment, and tracking progress. Used React Context API for state management and Tailwind CSS for styling. Deployed on Netlify: employee-management-system-byrudra.netlify.app.</li>
+      </ul>
+    </section>
+
+    <section class="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li contenteditable="true"><strong>InternPe (Jul. 2023 – Jul. 2023):</strong> Java Programmer Intern - Learned Java and applied it to real-world scenarios. Gained experience in teamwork and collaboration.</li>
+        <li contenteditable="true"><strong>Logipool Infotech (Jul. 2021 – Sep. 2021):</strong> Web Developer Intern - Developed landing pages, clones, and a portfolio using HTML, CSS, and JavaScript. Enhanced web development skills by working on responsive designs.</li>
+      </ul>
+    </section>
+
+    <section class="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li contenteditable="true">Full Stack Development Certificate - Apna College</li>
+        <li contenteditable="true">Web Development Certificate - freeCodeCamp</li>
+      </ul>
+    </section>
+
+    <section class="hobbies">
+      <h2>Interests and Hobbies</h2>
+      <ul>
+        <li contenteditable="true">Teaching, Vlogging, Traveling, Video Editing</li>
+        <li contenteditable="true">Educational Channel: youtube.com/@LastNightEngineering</li>
+        <li contenteditable="true">Vlogging Channel: youtube.com/@rudrarajkudale</li>
+      </ul>
+    </section>
+  </div>
+
+  <button id="download-btn">Download Resume</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    document.getElementById("download-btn").addEventListener("click", function () {
+      const resume = document.getElementById("resume");
+      html2canvas(resume).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "resume.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+    });
+  </script>
+</body>
+</html>
